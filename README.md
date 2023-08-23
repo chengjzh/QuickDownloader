@@ -3,7 +3,7 @@ It is C++ application to download file from network by muti-thread.
 
 # 代码基本结构
 ```mermaid
-	flowchart 代码结构;
+graph TD;
     ProtocolFactory-->DownLoadBusiness;
 ```
 
