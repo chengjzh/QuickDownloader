@@ -4,11 +4,11 @@
 # 代码基本结构
 ```mermaid
 graph TD;
-	DownLoadBusiness-->Main;
-	FileVerify-->Main;
-	ProtocolFactory-->DownLoadBusiness;
-	HTTPProtocol-->ProtocolFactory;
-	CUrlDownloader-->HTTPProtocol;
+	Main-->DownLoadBusiness;
+	Main-->FileVerify;
+	DownLoadBusiness-->ProtocolFactory;
+	ProtocolFactory-->HTTPProtocol;
+	HTTPProtocol-->CUrlDownloader;
 ```
 
 # 安装依赖
