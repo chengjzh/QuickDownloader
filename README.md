@@ -5,7 +5,7 @@ It is C++ application to download file from network by muti-thread.
 ```mermaid
 graph TD;
 	DownLoadBusiness-->Main;
-	FileVerify->Main;
+	FileVerify-->Main;
 	ProtocolFactory-->DownLoadBusiness;
 	HTTPProtocol-->ProtocolFactory;
 	CUrlDownloader-->HTTPProtocol;
