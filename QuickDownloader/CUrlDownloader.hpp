@@ -26,6 +26,22 @@ public:
         downloader.m_url = nullptr;
     }
     
+    CurlDownloader& operator= (CurlDownloader&& downloader) noexcept{
+        if(this == &downloader){
+            return *this;
+        }
+        
+        m_sUrl = downloader.m_sUrl;
+        m_sOutputFilename = downloader.m_sOutputFilename;
+        if(m_url){
+            curl_easy_cleanup(m_url);
+        }
+        
+        m_url = downloader.m_url;
+        downloader.m_url = nullptr;
+        return *this;
+    }
+    
     CurlDownloader(const CurlDownloader& curl) = delete;
     CurlDownloader& operator=(const CurlDownloader& curl) = delete;
     
